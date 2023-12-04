@@ -1,0 +1,19 @@
+{
+	"login": {
+		"not_registered": "Email atau Nomor hp anda belum terdaftar",
+		"wrong_password": "Password anda salah"
+	},
+	"admin": {
+		"already_registered": "Email atau Nomor hp anda sudah terdaftar",
+		"not_found": "Admin tidak ditemukan",
+		"cannot_delete_yourself": "Anda tidak dapat menghapus diri anda sendiri",
+		"menu_already_registered": "Menu sudah terdaftar",
+		"email_registration": "Berikut Password anda untuk login ke aplikasi : %s",
+		"not_allowed_to_create_monster": "Hanya admin yang dapat membuat monster",
+		"monster_not_found": "Monster tidak bisa ditemukan",
+		"not_allowed_to_update_monster": "Hanya admin yang dapat mengubah monster"
+	},
+	"general": {
+		"error_try_again": "Terjadi kesalahan silahkan coba beberapa saat lagi"
+	}
+}

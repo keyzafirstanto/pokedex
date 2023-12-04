@@ -1,0 +1,54 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// MODEL ADMIN
+model Admin {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  phone           String    @unique
+  email           String    @unique
+  password        String
+  token_onesignal String?
+  role            AdminRole @default(USER)
+  is_deleted      Boolean   @default(false)
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @updatedAt
+
+  @@index([email(sort: Desc), phone(sort: Desc)])
+  @@index([name(sort: Desc), email(sort: Desc), phone(sort: Desc)])
+  @@map("admins")
+}
+
+enum AdminRole {
+  ADMIN
+  USER
+}
+
+// END MODEL ADMIN
+
+// MODEL MONSTER
+model Monster {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String   @unique
+  type        String[]
+  description String   @default("")
+  picture     String   @default("")
+  height      String   @default("")
+  weight      String   @default("")
+  health      Int      @default(0)
+  attack      Int      @default(0)
+  speed       Int      @default(0)
+  updated_by  String   @default("")
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("monsters")
+}
+
+// END MODEL MONSTER
