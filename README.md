@@ -2,6 +2,9 @@
 
 Tentang Anak Pokedex is a backend API service that deals with CRUD in handling Pokemon monsters. Using primarily Node.js, Express.js, as well as TypeScript as its backbone language and mongoDB as its database. Moreover, the API is also using [Prisma](https://www.prisma.io/) to help establish connection with the database and [Yup](https://www.npmjs.com/package/yup) to handle query or body validation. The program will be running on port 9000 however you are able to modify in `app.ts` or add it on your `.env`. I have also intentionally attached `.env` in this repo to make it easier to run.
 
+## MongoDB as database - Reason to use:
+In 2018, estimated 700 pokemons were counted and in 20219 estimated around 800-900 pokemons available for mass public to catch. Hence, if we looked at the increment of total pokemons per each year, i believe mongoDB will suit well with with the surge of number. This is primarily because non-SQL database is well-known for scalability and flexibility in terms of shape or size. Moreover, if we consider the evolving nature of pokemons, editing and updating pokemons would be one of primary concerns that we need to account for. Thus, non-SQL database can offer significant advantages by allowing flexible storage of diverse Pokémon attributes without rigid structures. Semi-structured, and polymorphic data efficiently, perfect for the varied nature of Pokémon attributes -- for instance, height, speed, and types. Additionally, NoSQL's distributed architecture ensures high availability, fault tolerance, and better performance, offering an optimal solution for dynamic Pokémon databases.
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install all the dependencies.
@@ -50,28 +53,28 @@ Please download and import this [Postman](https://drive.google.com/file/d/1xscdG
 ## Samples
 
 
-#Login
+###Login
 <img width="1887" alt="Screen Shot 2023-12-04 at 21 38 21 pm" src="https://github.com/keyzafirstanto/pokedex/assets/82820858/adc2bdff-5bc2-487e-a90c-52842f6b7a8f">
 
 
-#Index List Pokemon
+###Index List Pokemon
 <img width="1883" alt="Screen Shot 2023-12-04 at 21 38 49 pm" src="https://github.com/keyzafirstanto/pokedex/assets/82820858/2cd8c84e-3a93-4c82-ba30-deb7ea3a0d7c">
 
 
-#Create Monster (Admin only)
+###Create Monster (Admin only)
 <img width="1886" alt="Screen Shot 2023-12-04 at 21 38 58 pm" src="https://github.com/keyzafirstanto/pokedex/assets/82820858/3a880d97-9d2d-4573-ad83-058254d5354a">
 
 
-#Find Detail Monster
+###Find Detail Monster
 <img width="1893" alt="Screen Shot 2023-12-04 at 21 39 05 pm" src="https://github.com/keyzafirstanto/pokedex/assets/82820858/1019060a-179d-4a3c-b4e1-4a6e871f7698">
 
 
-#Update Monster (Admin only)
+###Update Monster (Admin only)
 Case when user's not admin and tried to update monster
 <img width="1881" alt="Screen Shot 2023-12-04 at 21 39 28 pm" src="https://github.com/keyzafirstanto/pokedex/assets/82820858/df21c5c2-cc0c-48cb-b573-1f5fe5272d6e">
 
 
-#Delete Monster (Admin only)
+###Delete Monster (Admin only)
 <img width="1886" alt="Screen Shot 2023-12-04 at 21 39 33 pm" src="https://github.com/keyzafirstanto/pokedex/assets/82820858/0b4eee91-7391-43aa-8002-1071f240c3b9">
 
 
